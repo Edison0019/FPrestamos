@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FPrestamos pagina de inicio</title>
+    <link rel="stylesheet" href="../CSS/general.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/navigation.css">
+</head>
+<body>
+    <header>
+        <!-- HEADER -->
+        <div class="header">
+            <span id="logo" class="empresa">FPrestamos.com</span>
+            <ul class="empresa" id="aboutus">
+                <li class="flist">Sobre nosotros</li>
+                <li>Contacto</li>
+            </ul>
+            <ul class="empresa" id="user">
+                <li class="flist">Registrate</li>
+                <li>Accede</li>
+            </ul>
+        </div>
+        <!-- SLIDESHOW -->
+        <div class="slideshow">
+                <div class="slides fade">
+                    <img src="../images/laptop.jpg" alt="laptop">
+                    <div class="text">Caption Text</div>
+                </div>
+            
+                <div class="slides fade">
+                    <img src="../images/party.jpg" alt="dj">
+                    <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="slides fade">
+                    <img src="../images/friends.jpg" alt="friends">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <div class="slides fade">
+                        <img src="../images/happiness.jpg" alt="happiness">
+                        <div class="text">Caption Four</div>
+                </div>
+            </div>
+            <br>            
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+            </div>
+    </header>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="navigation" id="sideNav">
+            <table cellpadding="0px">
+                <tr>
+                    <td><a class="nav" href="#">User Name</a></td>
+                    <td><a onclick="closeNav()" class="nav" href="#" id="tbutton">&#10006;</a></td>
+                </tr>
+                <tr>
+                    <td><img src="../images/hombre.png" alt="Figura" id="user"></td>
+                </tr>
+                <tr><td><a href="#" class="tuser">Salir</a><a href="#" class="tuser">Ver perfil</a></td></tr>
+                <tr>
+                    <td><a href="#" class="nav">Prestamo actual</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="nav">Consultar Historico de prestamos</a></td>            
+                </tr>
+            </table>
+        </div>
+        <span id="open" onclick="openNav()">&#9776;</span>
+    </nav>
+    <section>
+
+    </section>
+    <footer>
+        
+    </footer>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/havigation.js"></script>
+</body>
+</html>

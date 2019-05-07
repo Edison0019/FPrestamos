@@ -1,0 +1,78 @@
+/* these are the side bar format configurations */
+
+.navigation {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.navigation a.nav {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 150%;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.navigation a:hover {
+color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+.navigation {padding-top: 15px;}
+.navigation a {font-size: 18px;}
+}
+
+#open{
+    cursor: pointer;
+    font-size: 200%;
+    position: fixed;
+    left: 1%;
+    top: 8%;
+    color: black;
+}
+
+#open:hover, #tbutton:hover{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(0,0,0,0.4);
+}
+
+img#user{
+    width: 90%;
+    height: 160px;
+    border-radius: 50%;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+}
+tr td{
+    padding: 5px;
+}
+ table{
+    width: auto;
+    height: auto;
+ }
+
+ .tuser{
+    padding: 8px 8px 8px 50px;
+    text-decoration: none;
+    font-size: 80%;
+    color: #818181;
+    display: inline-block;
+    transition: 0.3s;     
+ }
+
+ #tbutton{
+     font-size: 180%;
+     padding: 5px;
+ }
