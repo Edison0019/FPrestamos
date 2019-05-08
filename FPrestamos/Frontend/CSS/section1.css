@@ -1,0 +1,12 @@
+.first_article{
+    width: 100%;
+    background-image: url("../images/purpose.jpg");
+    background-size: 100%;
+    opacity: 0.4;
+    height: 600px;
+    color: black;
+}
+
+#fsection{
+    color: black;
+}
