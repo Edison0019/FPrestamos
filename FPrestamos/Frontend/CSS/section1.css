@@ -1,12 +1,20 @@
 .first_article{
     width: 100%;
-    background-image: url("../images/purpose.jpg");
+    background-image: url("../images/white.jpg");
     background-size: 100%;
-    opacity: 0.4;
-    height: 600px;
-    color: black;
+    height: 500px;
+    position: relative;
 }
 
+.first_article::before{
+    content: '';
+    background: rgba(0,0,0,-0.4);
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
 #fsection{
     color: black;
 }
