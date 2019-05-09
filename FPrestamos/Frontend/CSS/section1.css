@@ -1,3 +1,5 @@
+/* FIRST PART this is the form part */
+
 .first_article{
     width: 100%;
     background-image: url("../images/white.jpg");
@@ -6,15 +8,49 @@
     position: relative;
 }
 
-.first_article::before{
-    content: '';
-    background: rgba(0,0,0,-0.4);
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-}
 #fsection{
     color: black;
 }
+
+section#fsection h2{
+    padding-top: 15px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.farticle{
+    margin: 10px;
+    padding-top: 5px;
+}
+
+#ftable{
+    margin-left: 10%;
+    text-align: center;
+    float: left;
+}
+.lform{
+    border: solid silver 1px;
+    font-size: 100%;
+    border-radius: 4px;
+    width: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+}
+
+#lbutton{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    font-size: 100%;
+    background-color: black;
+    height: 40px;
+    color: white;
+    border: solid 1px;
+}
+
+#lbutton:hover{
+    font-weight: bold;
+    color: black;
+    background-color: lightgrey;
+}
+
+/*SECOND PART this is the part of the calculation table*/

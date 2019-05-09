@@ -47,7 +47,7 @@ color: #f1f1f1;
 }
 
 img#user{
-    width: 90%;
+    width: 80%;
     height: 160px;
     border-radius: 50%;
 }
@@ -69,10 +69,14 @@ tr td{
     font-size: 80%;
     color: #818181;
     display: inline-block;
-    transition: 0.3s;     
+    transition: 0.3s; 
  }
 
  #tbutton{
      font-size: 180%;
      padding: 5px;
+ }
+
+ div.navigation td{
+     text-align: center;
  }
