@@ -61,3 +61,9 @@ section#fsection h2{
     right: 10%;
     position: absolute;
 }
+
+.overgf{
+    width: 30%;
+    height: 400px;
+    overflow: auto;
+}
