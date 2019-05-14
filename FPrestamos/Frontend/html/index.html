@@ -84,11 +84,11 @@
                     <div>
                         <table id="ftable">
                             <tr>
-                                <td><select class="lform" id="lcuotas">
+                                <td><select class="lform" id="lcuotas" onchange="enable()">
                                     <option value="" selected>-- Seleccionar tipo de cuotas --</option>
-                                    <option value="semanal">Semanal</option>
-                                    <option value="quincenal">Quincenal</option>
-                                    <option value="mensual">Mensual</option>
+                                    <option value="Semanal">Semanal</option>
+                                    <option value="Quincenal">Quincenal</option>
+                                    <option value="Mensual">Mensual</option>
                                 </select></td>
                             </tr>
                             <tr>
@@ -110,7 +110,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <select class="lform" id="">
+                                    <select class="lform" id="dis">
                                         <option value="" selected>--Seleccionar cantidad de cuotas--</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -129,7 +129,7 @@
                                 </td><td class="result"></td>
                             </tr>
                             <tr><td style ="padding-left: 120px;"><button type="button" onclick="myLoan()" id="lbutton">Calcular</button></td></tr>
-                            <span id="outcome"></span>
+                            <tr><td><span id="outcome"></span></td></tr>
                         </table>
                     </div>
                     <div>
