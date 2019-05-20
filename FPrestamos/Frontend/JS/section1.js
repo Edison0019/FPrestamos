@@ -1,7 +1,7 @@
 "use strict"
 
 function enable(){
-    document.getElementById('dis').disabled = true;
+    document.getElementById('dis').disabled = false;
 }
 
 function myLoan(){
@@ -13,6 +13,9 @@ function myLoan(){
     var int = (0.10 / 30).toPrecision(); //interes calculado por dia
     var aint = ""; //interes llevado a periodos
     var txt = ""; //texto para desplegar la tabla de amortizacion (loop)
+    var interes; //calculo del interes total
+    var pcapital, pinteres, ptotal; //valores detallados de tabla de amortizacion
+    var doc = document.getElementById('overgf');
     if(tcuota.value == "" || monto.value == "" || cuota.value == ""){
         return result.innerHTML = "*Debe completar todos los campos";
     }
@@ -27,10 +30,35 @@ function myLoan(){
             aint = (30 * int).toPrecision();
             break;
     };
-    resumen[0].innerHTML = "Monto: " + monto.value;
-    resumen[1].innerHTML = cuota.value + " cuotas " + tcuota.value.toLocaleLowerCase() + "es";
-    resumen[2].innerHTML = "Interes: " + (cuota.value * aint * monto.value).toFixed(0);
-    for(var i = 0; i < cuota.value + 1; i++){
+    /* VARIABLES A SER UTILIZADAS EN LA TABLA */
+    interes = (cuota.value * aint * monto.value).toFixed(0);
+    pcapital = (monto.value / cuota.value).toFixed(2);
+    pinteres = (interes / cuota.value).toFixed(2);
+    ptotal = (pinteres * 1 + pcapital * 1).toFixed(2);
+    acumulado = 0;
+    acumulado = Number(acumulado);
+    restante = ptotal * cuota.value;
 
-    }
+    /* VALORES A COLORCARSE EN EL INICIO DE LA TABLA DE AMORTIZACION */
+    resumen[0].innerHTML = "Monto: " + monto.value;
+    resumen[1].innerHTML = cuota.value + " cuotas";
+    resumen[2].innerHTML = ptotal + " " + tcuota.value;
+    resumen[3].innerHTML = "Interes: " + interes;
+
+    /* VALORES A COLOCARSE COMO CUERPO DE TABLA DE AMORTIZACION */
+    txt += "<table class=" + "tdata" + "><tr><th>Cuota no.</th><th>Capital</th><th>Interes</th>" + 
+    "<th>Cuota</th><th>Total Pago</th><th>Total pendiente</th></tr>"
+    
+    for(var i = 0; i < cuota.value; i++){
+        txt += "<tr>" + "<td>" + (i + 1) + "</td>" +
+        "<td>" + pcapital + "</td>" +
+        "<td>" + pinteres + "</td>" +
+        "<td>" + ptotal + "</td>" +
+        "<td>" + (acumulado += (ptotal * 1)).toFixed(2) + "</td>" +
+        "<td>" + (restante -= ptotal).toFixed(2) + "</td>" + "</tr>";
+    };
+
+    txt += "</table>"
+    document.getElementById('stable').style.display = "block"
+    doc.innerHTML = txt;
 };

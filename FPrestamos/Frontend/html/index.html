@@ -81,74 +81,75 @@
             <section id="fsection">
                 <header><h2>Calcula tu prestamo ahora mismo!</h2></header>
                 <article class="farticle">
-                    <div>
-                        <table id="ftable">
-                            <tr>
-                                <td><select class="lform" id="lcuotas" onchange="enable()">
-                                    <option value="" selected>-- Seleccionar tipo de cuotas --</option>
-                                    <option value="Semanal">Semanal</option>
-                                    <option value="Quincenal">Quincenal</option>
-                                    <option value="Mensual">Mensual</option>
-                                </select></td>
-                            </tr>
-                            <tr>
-                                <td><select class="lform" id="">
-                                    <option value="" selected>-- Seleccionar cantidad --</option>
-                                    <option value="1000">1,000.00</option>
-                                    <option value="2000">2,000.00</option>
-                                    <option value="3000">3,000.00</option>
-                                    <option value="4000">4,000.00</option>
-                                    <option value="5000">5,000.00</option>
-                                    <option value="6000">6,000.00</option>
-                                    <option value="7000">7,000.00</option>
-                                    <option value="8000">8,000.00</option>
-                                    <option value="9000">9,000.00</option>
-                                    <option value="10000">10,000.00</option>
-                                    <option value="11000">11,000.00</option>
-                                    <option value="12000">12,000.00</option>
-                                </select></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select class="lform" id="dis">
-                                        <option value="" selected>--Seleccionar cantidad de cuotas--</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                    </select>
-                                </td><td class="result"></td>
-                            </tr>
-                            <tr><td style ="padding-left: 120px;"><button type="button" onclick="myLoan()" id="lbutton">Calcular</button></td></tr>
-                            <tr><td><span id="outcome"></span></td></tr>
-                        </table>
+                    <div id="ftable">
+                        <div id="formtable">
+                            <table>
+                                <tr>
+                                    <td><select class="lform" id="lcuotas" onchange="enable()">
+                                        <option value="" selected>-- Seleccionar tipo de cuotas --</option>
+                                        <option value="Semanal">Semanal</option>
+                                        <option value="Quincenal">Quincenal</option>
+                                        <option value="Mensual">Mensual</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><select class="lform" id="">
+                                        <option value="" selected>-- Seleccionar cantidad --</option>
+                                        <option value="1000">1,000.00</option>
+                                        <option value="2000">2,000.00</option>
+                                        <option value="3000">3,000.00</option>
+                                        <option value="4000">4,000.00</option>
+                                        <option value="5000">5,000.00</option>
+                                        <option value="6000">6,000.00</option>
+                                        <option value="7000">7,000.00</option>
+                                        <option value="8000">8,000.00</option>
+                                        <option value="9000">9,000.00</option>
+                                        <option value="10000">10,000.00</option>
+                                        <option value="11000">11,000.00</option>
+                                        <option value="12000">12,000.00</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select class="lform" id="dis" disabled>
+                                            <option value="" selected>--Seleccionar cantidad de cuotas--</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                        </select>
+                                    </td><td class="result"></td>
+                                </tr>
+                                <tr><td style ="padding-left: 120px;"><button type="button" onclick="myLoan()" id="lbutton">Calcular</button></td></tr>
+                                <tr><td><span id="outcome"></span></td></tr>
+                            </table>                            
+                        </div>
+
                     </div>
-                    <div>
-                        <table id="stable">
-                            <tr>
-                                <td class="summary"></td>
-                                <td class="summary" colspan="3"></td>
-                                <td class="summary"></td>
-                            </tr>
-                            <tr>
-                                <td>Cuota no.</td>
-                                <td>Capital</td>
-                                <td>Interes</td>
-                                <td>Total Pago</td>
-                                <td>Total pendiente</td>
-                            </tr>
-                            <div class="overf">
-                            </div>
-                        </table>
+                    <div id="stable">
+                        <div id="thead">
+                            <p class="explain">Datos resumidos:</p>
+                            <table class="tdata">
+                                <tr>
+                                    <td class="summary"></td>
+                                    <td class="summary"></td>
+                                    <td class="summary"></td>
+                                    <td class="summary"></td>
+                                </tr>
+                            </table>                            
+                        </div>
+                        <br><br>
+                        <p class="explain">Tabla de prestamo:</p>
+                        <div id="overgf"></div>
                     </div>
                 </article>
             </section>
